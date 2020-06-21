@@ -1,0 +1,7 @@
+{
+  "name": "chationic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
