@@ -15,16 +15,9 @@ export class HomePage {
     ) { 
       this.fbauth.authState.subscribe(user => {
         if (user) {
-          console.log('Autenticado: ' + user.uid);
-        } else {
-          console.log('Não autenticado');
+          this.route.navigateByUrl('usuarios');
         }
       });
-    }
-
-    logout() {
-      this.fbauth.auth.signOut();
-      this.route.navigate(['/home']);
     }
 
 }

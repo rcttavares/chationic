@@ -34,7 +34,7 @@ export class UsuariosPage implements OnInit {
             let usuario = new Usuarios();
             usuario.nome = element.data().nome
             usuario.email = element.data().email
-            usuario.userId = element.id
+            usuario.userId = element.data().userId
 
             this.listaUsuarios.push(usuario);
           });
@@ -45,7 +45,7 @@ export class UsuariosPage implements OnInit {
             let usuario = new Usuarios();
             usuario.nome = element.data().nome
             usuario.email = element.data().email
-            usuario.userId = element.id
+            usuario.userId = element.data().userId
 
             this.listaUsuarios.push(usuario);
           });
@@ -54,6 +54,15 @@ export class UsuariosPage implements OnInit {
         console.log(this.listaUsuarios);
       }
     });
+  }
+
+  IrParaMensagens(userId) {
+    this.route.navigate(['/mensagens/' + userId]);
+  }
+
+  logout() {
+    this.fbauth.auth.signOut();
+    this.route.navigate(['/home']);
   }
 
 }

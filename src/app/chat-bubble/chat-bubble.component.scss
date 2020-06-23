@@ -1,0 +1,58 @@
+.chatBubble{
+    .message {
+        font-size: 14px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+  
+    .message-detail {
+        white-space: nowrap;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+  
+    .chat-bubble {
+        border-radius: 5px;
+        display: inline-block;
+        padding: 8px;
+        position: relative;
+        margin: 10px;
+    }
+  
+    .chat-bubble:before {
+        content: "\00a0";
+        display: block;
+        height: 16px;
+        width: 9px;
+        position: absolute;
+        bottom: -7.5px;
+    }
+  
+    .chat-bubble.left {
+        background-color: #fea21c;
+        float: left;
+    }
+    
+    .chat-bubble.left:before {
+        background-color: #fea21c;
+        left: 10px;
+        -webkit-transform: rotate(70deg) skew(5deg);
+    }
+    
+    .chat-bubble.right {
+        background-color: #8abefa;
+        color: #000;
+        float: right;
+    }
+    
+    .chat-bubble.right:before {
+        background-color: #8abefa;
+        right: 10px;
+        -webkit-transform: rotate(118deg) skew(-5deg);
+    }
+
+    .chat-bubble.right a.autolinker {
+        color: #000;
+        font-weight: bold;
+    }
+}
